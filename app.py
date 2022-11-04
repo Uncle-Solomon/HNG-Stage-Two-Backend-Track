@@ -3,7 +3,7 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 CORS(app)
-@app.route('/')
+@app.route('/', methods=['GET'])
 def something():
     return "vibes"
 @app.route('/api/v1', methods=['POST'])
