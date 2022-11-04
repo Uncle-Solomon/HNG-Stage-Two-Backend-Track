@@ -3,8 +3,14 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/')
+def index():
+    return jsonify({
+        'success': True,
+        'message': 'Welcome to HNG 9 Stage 2 Task'
+    })
 
-@app.route('/', methods=['POST'])
+@app.route('/api/v1/calculate', methods=['POST'])
 def calculatorApi():
     body = request.get_json()
 
