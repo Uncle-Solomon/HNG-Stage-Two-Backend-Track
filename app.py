@@ -4,7 +4,7 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/api/v1', methods=['POST'])
 def calculatorApi():
     body = request.get_json()
 
